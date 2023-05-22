@@ -40,37 +40,57 @@ choco upgrade --cache="$ChocoCachePath" --yes microsoft-edge
 choco upgrade --cache="$ChocoCachePath" --yes git
 choco upgrade --cache="$ChocoCachePath" --yes ghostscript.app
 choco upgrade --cache="$ChocoCachePath" --yes 7zip.install
-choco upgrade --cache="$ChocoCachePath" --yes office365business
-choco upgrade --cache="$ChocoCachePath" --yes screentogif
+choco upgrade --cache="$ChocoCachePath" --yes jetbrainstoolbox
+choco upgrade --cache="$ChocoCachePath" --yes googledrive
+choco upgrade --cache="$ChocoCachePath" --yes ditto
+# verify
+choco upgrade --cache="$ChocoCachePath" --yes notion
+choco upgrade --cache="$ChocoCachePath" --yes drawio
+choco upgrade --cache="$ChocoCachePath" --yes nswagstudio
+choco upgrade --cache="$ChocoCachePath" --yes pgadmin4
+choco upgrade --cache="$ChocoCachePath" --yes windirstat
+choco upgrade --cache="$ChocoCachePath" --yes wireshark
+
+#choco upgrade --cache="$ChocoCachePath" --yes office365business
+#choco upgrade --cache="$ChocoCachePath" --yes screentogif
 choco upgrade --cache="$ChocoCachePath" --yes paint.net
 choco upgrade --cache="$ChocoCachePath" --yes chocolateygui
 choco upgrade --cache="$ChocoCachePath" --yes powershell-core
-choco upgrade --cache="$ChocoCachePath" --yes ripgrep
+#choco upgrade --cache="$ChocoCachePath" --yes ripgrep
 choco upgrade --cache="$ChocoCachePath" --yes microsoft-windows-terminal
-choco upgrade --cache="$ChocoCachePath" --yes winsnap
-choco upgrade --cache="$ChocoCachePath" --yes gsudo
+#choco upgrade --cache="$ChocoCachePath" --yes winsnap
+#choco upgrade --cache="$ChocoCachePath" --yes gsudo
 
+<# To install manually
+    # choco upgrade --cache="$ChocoCachePath" --yes greenshoot
+    # choco upgrade --cache="$ChocoCachePath" --yes jabradirect
+    # choco upgrade --cache="$ChocoCachePath" --yes sublimetext
+    # choco upgrade --cache="$ChocoCachePath" --yes hpsmart
+    # choco upgrade --cache="$ChocoCachePath" --yes keepassxc
+    # choco upgrade --cache="$ChocoCachePath" --yes bitwarder
+    # choco upgrade --cache="$ChocoCachePath" --yes XpansionPerfectPdf9
+#>
 if(!$IsArm) {
     # x86/x64 only    
     choco upgrade --cache="$ChocoCachePath" --yes nugetpackageexplorer
     choco upgrade --cache="$ChocoCachePath" --yes docker-for-windows
-    choco upgrade --cache="$ChocoCachePath" --yes geforce-experience
+    #choco upgrade --cache="$ChocoCachePath" --yes geforce-experience
     choco upgrade --cache="$ChocoCachePath" --yes sysinternals
     choco upgrade --cache="$ChocoCachePath" --yes nodejs
-    choco upgrade --cache="$ChocoCachePath" --yes cmake
+    # choco upgrade --cache="$ChocoCachePath" --yes cmake
     choco upgrade --cache="$ChocoCachePath" --yes curl
     choco upgrade --cache="$ChocoCachePath" --yes vscode
-    choco upgrade --cache="$ChocoCachePath" --yes visualstudio2022professional --package-parameters "--add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --norestart --passive --locale en-US"
+    #choco upgrade --cache="$ChocoCachePath" --yes visualstudio2022professional --package-parameters "--add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --norestart --passive --locale en-US"
     choco upgrade --cache="$ChocoCachePath" --yes dotpeek --pre
     choco upgrade --cache="$ChocoCachePath" --yes poshgit
-    choco upgrade --cache="$ChocoCachePath" --yes powertoys
+    #choco upgrade --cache="$ChocoCachePath" --yes powertoys
     choco upgrade --cache="$ChocoCachePath" --yes sql-server-management-studio
 
     # Move this to separate installer
-    choco upgrade --cache="$ChocoCachePath" --yes steam
-    choco upgrade --cache="$ChocoCachePath" --yes uplay
-    choco upgrade --cache="$ChocoCachePath" --yes streamdeck
-    choco upgrade --cache="$ChocoCachePath" --yes epicgameslauncher        
+    # choco upgrade --cache="$ChocoCachePath" --yes steam
+    # choco upgrade --cache="$ChocoCachePath" --yes uplay
+    # choco upgrade --cache="$ChocoCachePath" --yes streamdeck
+    # choco upgrade --cache="$ChocoCachePath" --yes epicgameslauncher        
 }
 
 ##########################################################################
